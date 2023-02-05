@@ -14,7 +14,7 @@ target/
 .project
 .settings/
 build/
-.persistence.xml
+persistence.xml
 
 # OS Files
 Thumbs.db
