@@ -9,20 +9,28 @@
 
                 <h2>id：${task.id}のタスク詳細ページ</h2>
 
-                <p>
-                    タスク：
-                    <c:out value="${task.content}"></c:out>
-                </p>
-                <p>
-                    作成日時：
-                    <fmt:formatDate value="${task.created_at}"
-                        pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
-                </p>
-                <p>
-                    更新日時：
-                    <fmt:formatDate value="${task.updated_at}"
-                        pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate>
-                </p>
+                <table>
+                    <tbody>
+
+                        <tr>
+                            <th>タスク：</th>
+                            <td><c:out value="${task.content}"></c:out></td>
+                        </tr>
+
+                        <tr>
+                            <th>作成日時：</th>
+                            <td><fmt:formatDate value="${task.created_at}"
+                                    pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
+                        </tr>
+
+                        <tr>
+                            <th>更新日時：</th>
+                            <td><fmt:formatDate value="${task.updated_at}"
+                                    pattern="yyyy-MM-dd HH:mm:ss"></fmt:formatDate></td>
+                        </tr>
+
+                    </tbody>
+                </table>
 
                 <p>
                     <a href="${pageContext.request.contextPath}/index">一覧に戻る</a>
